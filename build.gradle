@@ -3,3 +3,21 @@ allprojects {
    apply plugin: 'java'
 }
 
+
+allprojects {
+
+  repositories {
+      mavenCentral()
+  }
+
+}
+
+project('external:modules:lib-b') {
+
+    configurations.all {
+        resolutionStrategy.dependencySubstitution { 
+            substitute project(':modules:lib-a') with module('org.apache.commons:commons-collections4:4.4')
+        }
+    }
+
+}
