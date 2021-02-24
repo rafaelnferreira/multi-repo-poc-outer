@@ -23,6 +23,6 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: include stub submodule to base repo
-      run: git submodule update --init
+      uses: textbook/git-checkout-submodule-action@2.1.1
     - name: Build with Gradle
       run: ./gradlew build
