@@ -1,15 +1,10 @@
 
 allprojects {
    apply plugin: 'java'
-}
 
-
-allprojects {
-
-  repositories {
+   repositories {
       mavenCentral()
   }
-
 }
 
 project('external:modules:lib-b') {

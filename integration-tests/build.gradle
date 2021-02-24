@@ -1,0 +1,12 @@
+dependencies {
+    testImplementation project(':external:modules:lib-b')
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.+'
+}
+
+test {
+    useJUnitPlatform()
+    // Show test results.
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
